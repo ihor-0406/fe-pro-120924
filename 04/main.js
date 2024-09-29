@@ -69,3 +69,11 @@ console.log('=============')
 
 //=======1==========
 
+//====2====
+function squareArray(arr){
+    let NewArr= [];
+    for (let c = 0; c < arr.length; c++) {
+        let element = arr[c]**2;
+        NewArr.push(element);
+    }
+}
