@@ -150,6 +150,24 @@ function createObjectArray(names,ages){
 console.log(createObjectArray(names,ages));
 
 //===============================================Додаткові завдання=================================
+console.log('=====1=====');
+
+//==========1========
+let number = [50,60,4,1,4,10,4,50,1,2,6]
+function createSortArray(arr){
+    let Num =[];
+    
+    for (let i = 0; i < arr.length; i++) {
+        if (Num.indexOf(arr[i]) === -1) {
+            Num.push(arr[i]);
+        }
+    }
+    Num.sort((a, b) => a - b);
+    Num.shift();
+        return Num;
+    }
+console.log(createSortArray(number))
+//======2=======
 console.log('=====2=====');
 let firstArr =[1,4,5,8];
 let secondArr= [3,7,2,6];
@@ -166,7 +184,7 @@ function SortConcatArray(firstArr, secondArr){
 }
 console.log(SortConcatArray(firstArr,secondArr));
 
-
+//========3======
 console.log('=====3=====');
 let users = [
     {name: 'Оля', age: 17},
