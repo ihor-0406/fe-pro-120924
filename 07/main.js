@@ -125,11 +125,11 @@ class Book{
     }
     //середня оцінка
     get averageRating(){
-        if(this.ratings.length === 0){
+        if(this._ratings.length === 0){
             return 0;
         }
         const total=this._ratings.reduce((sum,rating)=>sum + rating, 0);
-        return total / this.ratings.length;
+        return total / this._ratings.length;
     }
     //Рік публікації з перевіркою на майбутній рік.
     set year(year){
@@ -166,7 +166,7 @@ MyBook.addRating(4.3);
 MyBook.addRating(3);
 
 console.log(MyBook.getInfo());
-//console.log(`Середня оцінка:${MyBook.averageRating}`);
+console.log(`Середня оцінка:${MyBook.averageRating}`);
 
 //===№02===
 console.log('==№02==')
