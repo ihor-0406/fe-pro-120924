@@ -39,7 +39,7 @@ for(let book of bookArray){
    ratingCell.style.color='red'
    ratingCell.style.backgroundColor='rgba(255, 255, 0, 0.5)';
 
-//Добавляемо трошки стилізації нашої таблиці
+//Додаємо стилізації нашої таблиці
 
    let StyleTable =[titleCell,yearCell,ratingCell];
    StyleTable.forEach(cell=>{
@@ -87,7 +87,7 @@ header.style.textAlign='center';
 
 document.body.prepend(header);
 
-//Добавляємо наш масив
+//Додаємо наш масив
 
 const menuData=[
     {name: 'Головна', url:'/'},
@@ -127,8 +127,17 @@ for (let i = 0; i < 50; i++) {
     NewDiv.style.display='flex';
     NewDiv.style.justifyContent='center';
     NewDiv.style.alignItems='center';
-    NewDiv.style.backgroundColor=`#${Math.floor(Math.random()*16777215).toString(16)}`; //166777215-максимальна кількість кольорів в 24-бітній-палітрі
-    NewDiv.classList.add('cirle-element');
+   //1 варівнт стилізації блоків
+
+    // NewDiv.style.backgroundColor=`#${Math.floor(Math.random()*16777215).toString(16)}`; //166777215-максимальна кількість кольорів в 24-бітній-палітрі
+ 
+   //2 варіант стилізації наших блоків
+   const r=Math.floor(Math.random()*255);
+   const g=Math.floor(Math.random()*255);
+   const b= Math.floor(Math.random()*255);
+   NewDiv.style.backgroundColor= `rgb(${r},${g},${b})`
+ 
+   NewDiv.classList.add('cirle-element');
     div.appendChild(NewDiv)
 
 }
