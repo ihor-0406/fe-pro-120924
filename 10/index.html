@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript-DOM</title>
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+        .click{
+            text-align: center;
+            width: 500px;
+            height: 300px;
+            margin: 50px auto;
+            font-size: 26px;
+            background-color: rgb(231, 6, 28);
+            border: 2px solid black;
+        }
+        button{
+            width: 150px;
+            height: 70px;
+        }
+        .dobleClick{
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            text-align: center;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h2>OnClick</h2>
+    <div class="click">
+        
+        <p class="colorText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sed consequatur dolorem recusandae. Est quod molestiae fuga suscipit. Culpa omnis perspiciatis sequi consequatur possimus rerum distinctio doloremque aliquid numquam corporis!</p>
+        <button class="colorButton">Натисни на мене</button>
+    </div>
+    <h2>onDblcick</h2>
+   <div class="dobleClick">
+    <p>Клікни 2 рази по мені</p>
+   </div>
+   <h2>addEventListener i removeEventListener</h2>
+   <div class="click">
+    <p class="counter">0</p>
+    <button class="counterButton">
+        click 
+    </button>
+   </div>
+   <h2 class="DeleteElement">Видалення елементу</h2>
+
+   <div>
+    <h2>Event.targer</h2>
+    <div class="blockContainer">
+       <button class="button fist">Fist</button>
+       <button class="button second">Second</button>
+       <button class="button third">Third</button>
+    </div>
+    <div>
+    <h2>Menu</h2>
+    <div> 
+        <button class="menuBtn">Відкрити меню</button>
+        <ul class="menu" style="display: none;">
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+        </ul>
+       
+    </div>
+
+    </div>
+   </div>
+    <script src="script/main.js"></script>
+</body>
+</html>
