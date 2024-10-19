@@ -1,0 +1,109 @@
+.myBlock{
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+}
+.textBlock{
+    width: 500px;
+    height: 200px;
+    border: 2px solid black;
+}
+.contexMenu{
+    display: none;
+    position: absolute;
+    background-color: bisque;
+    padding: 0;
+    margin: 0;
+    border-radius: 10%;
+    z-index: 1000;
+
+}
+.contexMenu ul{
+    padding: 0;
+    margin: 0;
+    
+
+}
+.contexMenu ul li{
+    padding: 10px 15px;
+
+}
+.contexMenu ul li:hover{
+    background-color: lightblue;
+    border-left: 2px  solid black;
+
+}
+/* ==================================== */
+.game{
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    position: relative;
+    border: 10px solid red;
+}
+.player{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: rgb(227, 149, 53);
+    position: absolute;
+    top:10px;
+    left:10px;
+}
+.blockOne{
+    position: absolute;
+    top: 0;
+    left: 300px;
+    width: 20px;
+    height: 380px;
+    background-color: white;
+}
+.blockTwo{
+    position: absolute;
+    top: 100px;
+    left: 430px;
+    width: 20px;
+    height: 380px;
+    background-color: white;
+}
+.blockThree{
+    position: absolute;
+    top: 240px;
+    left: 0px;
+    width: 200px;
+    height: 20px;
+    background-color: white;
+}
+.blockFour{
+    position: absolute;
+    top: 340px;
+    left: 100px;
+    width: 200px;
+    height: 20px;
+    background-color: white;
+}
+.blockFive{
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    width: 40px;
+    height: 20px;
+    background-color: white;
+}
+.blockSix{
+    position: absolute;
+    top: 90px;
+    left: 100px;
+    width: 200px;
+    height: 20px;
+    background-color: white;
+}
+.blockSeven{
+    background-color: transparent;
+    position: absolute;
+    left: 460px;
+    top: 440px;
+    width: 40px;
+    height: 40px;
+}
+    /* ============================================= */
