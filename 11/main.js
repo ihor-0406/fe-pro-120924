@@ -44,6 +44,7 @@ document.getElementById('hideElement').addEventListener('click',function(){
 //=============================================================
 
 const player=document.querySelector('.player');
+
 let topPosition=10;
 let leftPosition=10;
 
@@ -63,9 +64,25 @@ document.addEventListener('keydown',function(e){
     };
     player.style.top=`${topPosition}px`;
     player.style.left=`${leftPosition}px`;
-
+    
+    checkClassCollision();
 })
+//Трохи ускладнив собі задачу, в якій блок (present) стає невидимим,
+// коли на нього накладається інший блок(player)....
+const present=document.querySelector('.present');
 
+function checkClassCollision(){
+    const objectTop=topPosition;
+    const objectLeft=leftPosition;
+    const presentTop= present.offsetTop;
+    const presentLeft= present.offsetLeft;
+
+    if(objectTop  < presentTop + 40 && objectTop + 40 > presentTop  && objectLeft < presentLeft + 40 && presentLeft + 40 > presentLeft
+    ){
+        present.classList.add('invisible'); 
+        invisible.style.display='none';
+    }
+}
 //================================================================
 
 const button=document.querySelector('.button');

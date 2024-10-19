@@ -21,8 +21,6 @@
 .contexMenu ul{
     padding: 0;
     margin: 0;
-    
-
 }
 .contexMenu ul li{
     padding: 10px 15px;
@@ -31,7 +29,6 @@
 .contexMenu ul li:hover{
     background-color: lightblue;
     border-left: 2px  solid black;
-
 }
 /* ==================================== */
 .game{
@@ -98,7 +95,7 @@
     height: 20px;
     background-color: white;
 }
-.blockSeven{
+.present{
     background-color: transparent;
     position: absolute;
     left: 460px;
