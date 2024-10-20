@@ -72,15 +72,8 @@ document.addEventListener('keydown',function(e){
 const present=document.querySelector('.present');
 
 function checkClassCollision(){
-    const objectTop=topPosition;
-    const objectLeft=leftPosition;
-    const presentTop= present.offsetTop;
-    const presentLeft= present.offsetLeft;
-
-    if(objectTop  < presentTop + 40 && objectTop + 40 > presentTop  && objectLeft < presentLeft + 40 && presentLeft + 40 > presentLeft
-    ){
-        present.classList.add('invisible'); 
-        invisible.style.display='none';
+    if(topPosition === 440 && leftPosition === 460){
+        present.style.display='none'
     }
 }
 //================================================================
@@ -109,10 +102,13 @@ taskBtn.addEventListener('click',function(){
         li.style.marginTop='10px'
         li.style.borderBottom='2px solid black';
         li.textContent=taskInput;
+
         li.addEventListener('click',function(){
             li.remove();
     })
-    taskList.appendChild(li);
+    taskList.appendChild(li);   
+
+    document.querySelector('.taskInput').value = '';
 }
 })
 }
