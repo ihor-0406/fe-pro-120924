@@ -1,0 +1,82 @@
+
+.poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .blockTimer{
+    width: 100px;
+    min-height: 300px;
+  }
+  .displayTimer{
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    margin-top: 15px;
+  }
+  .startBtn{
+    background-color: transparent;
+    border: 3px solid teal;
+    border-radius: 25px;
+    width: 120px;
+    height: 60px;
+    padding-bottom: 5px ; 
+    margin-bottom: 15px;
+    font-size: 35px; 
+    color: teal;
+}
+.startBtn:hover{
+    background-color: rgb(41, 106, 62);
+    color:tomato;
+}
+.infoTimes{
+    margin: 20px;
+    font-size: 50px;
+}
+.circle{
+    margin: 10px auto;
+    background: #1E1E1E;
+    width: 300px;
+    min-height: 300px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 10px solid #353535;
+}
+.timer{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 10px solid rgb(246, 162, 7);
+    margin: 20px auto;
+    padding: 50px;
+    text-align: center;
+}
+.time{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    font-size: 38px;
+    color: white;
+}
+.buttons{
+    display: flex;
+    justify-content:space-around;
+    font-size: 24px;
+    padding-bottom: 15px;
+}
+.buttons button{
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    border: 3px solid white;
+
+}
+
+button:hover{
+    background-color:rgb(246, 162, 7) ;
+    color: black;
+    border: none;
+}
