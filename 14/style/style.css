@@ -1,0 +1,5 @@
+.planetCard:hover{
+    transform: translateX(100px);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+    transition:transform 0.3s ease, box-shadow 0.5s ease;
+}

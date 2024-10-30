@@ -58,93 +58,46 @@ fetch('https://jsonplaceholder.typicode.com/users')
 
 //завантажуємо планети
 
-document.querySelector('.buttonPlanet').addEventListener('click', function(){
+document.querySelector('.buttonPlanet').addEventListener('click',function(){
     fetch('https://swapi.dev/api/planets/')
-    .then(response =>{
-        if(response){
-            return response.json();
-        }
-        else{
-            console.error(`Помилка мережі: ${response.status}`)
-            return 
-        }
-    })
-    .then(planetData =>{
-        if(planetData && planetData.results){
-            displayPlanets(planetData.results);
-        }
-        else{
-            console.log('Не вдалося завантажити дані')
-        }
-    })
-    .catch(error =>{
-        console.error('Сталася помилка:', error)
+    .then(response => response.json())
+    .then(data =>{
+        const container =document.querySelector('.planetsContainer');
+        container.innerHTML='';
+        data.results.forEach(planet => {
+            const planetsCard=document.createElement('div');
+            planetsCard.className='col-6  mb-3 ';
+            planetsCard.style.cursor='pointer';
+            planetsCard.innerHTML=` 
+            <div class="card planetCard h-100" data-url="${planet.url}">
+              <div class="card-body  bg-info bg-opacity-10 border border-info border rounded-end">
+                 <h4 class="card-title">${planet.name}</h4>
+             </div>
+            </div>`;
+         planetsCard.querySelector('.planetCard').addEventListener('click',function(){
+            loadPlanetDetails(planet.url);
+         });
+         container.appendChild(planetsCard)
+        });
     });
 });
 
-//відображення списку планет
-
-function displayPlanets(planets){
-    const container= document.querySelector('.planetsContainer');
-    container.innerHTML='';
-
-    planets.forEach(planet =>{
-        const planetCard=document.createElement('div');
-        planetCard.classList.add('card','mb-3','planetCard');
-        planetCard.style.cursor='pointer';
-        planetCard.innerHTML=`
-        <div class="card-body  bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
-          <h4 class="card-title">${planet.name}</h4>
-        </div>`
-        ;
-        const planetUrl=planet.url
-
-        planetCard.addEventListener('click',function(){
-            loadPlanetDetails(planetUrl);
-    });
-    
-    container.appendChild(planetCard);
-    });
-}
-
-// Функція для завантаження детальної інформації про планети
+//Деталі про планету
 
 function loadPlanetDetails(url){
     fetch(url)
-    .then(response =>{
-        if(response){
-            return response.json();
-        }
-        else{
-            console.error('Помилка мережі:'+response.status);
-            return;
-        }
-    })
+    .then(response => response.json())
     .then(planet =>{
-        if(planet){
-            displayPlanetsDetails(planet);
-        }
-        else{
-            console.log('Не вдалося завантажити дані про планету.')
-        }
-    })
-    .catch(error =>{
-        console.error('Сталася помилка:', error);
-    });
-}
-
-//Відображення детальної інфо про планети
-
-function displayPlanetsDetails(planet){
-    const infoPlanets=document.querySelector('.planetsInfo');
-    infoPlanets.innerHTML=`
-    <div class="card mt-3 bg-warning-subtle">
-      <div class="card-body">
-        <h1 class="card-title">${planet.name}</h1>
-        <p  class="card-text fs-4">Клімат: ${planet.climate}</p>
+        const infoContainer=document.querySelector('.planetsInfo');
+        infoContainer.innerHTML=`
+        <div class="card mt-3 bg-warning-subtle">
+       <div class="card-body">
+         <h1 class="card-title">${planet.name}</h1>
+         <p  class="card-text fs-4">Клімат: ${planet.climate}</p>
         <p  class="card-text fs-4">Населення: ${planet.population}</p>
         <p  class="card-text fs-4">Діаметр: ${planet.diameter}</p>
       </div>
     </div>
-    `;
+     `;
+    });
 }
