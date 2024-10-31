@@ -18,6 +18,11 @@ upperCase('hello world')
 .then (result=>console.log(result))
 .catch (error=>console.error(error));
 
+upperCase('red, black, white, orange')
+.then (result=>console.log(result))
+.catch (error=>console.error(error));
+
+
 //===================================================================
 //№02-завдання
 
@@ -38,6 +43,13 @@ compareNumber(10, 4 )
 .then (result => console.log(result))
 .catch (error => console.error(error));
 
+compareNumber(5, 40 )
+.then (result => console.log(result))
+.catch (error => console.error(error));
+
+compareNumber(2, 2 )
+.then (result => console.log(result))
+.catch (error => console.error(error));
 //===================================================================
 //№03-завдання
 
